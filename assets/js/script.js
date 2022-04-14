@@ -12,6 +12,7 @@ var cityName = "";
 var todaycontainer = $("#todaycontainer");
 var dailyDivs = [$('#day-1-div'), $('#day-2-div'), $('#day-3-div'), $('#day-4-div'), $('#day-5-div')];
 var hotelbody = $("#hotelbody");
+var hotelId = "";
 
 var savedCities = JSON.parse(localStorage.getItem('savedCities')) || [];
 
@@ -42,7 +43,7 @@ document.getElementById("formid").addEventListener('submit', function(event){
 
     getHotels(searchInput);
     //function for linking hotel images
-    getHotelImages(searchInput);
+    //getHotelImages(searchInput);
     getUserLocation(searchInput);
 });
 
@@ -195,10 +196,15 @@ var getHotels = function(searchInput) {
         var hotelName = document.createElement('div')
         hotelName.classList.add("title", "is-4")
         hotelName.textContent = response.suggestions[1].entities[i].name;
-        console.log(hotelName); 
+        console.log(hotelName);
+
+        hotelId =  response.suggestions[1].entities[i].destinationId;
+        console.log(hotelId);
 
         // Appending the cards and elements into the hotel card
         hotelbody.append(hotelName);
+
+        getHotelImages(hotelId);
         }
     })
 
@@ -208,8 +214,8 @@ var getHotels = function(searchInput) {
 
 //priyam and vickiana trying to link images for hotel 
 
-//get hotel images based on searchInput
-var getHotelImages = function (searchInput) {
+//get hotel images based on hotelId
+var getHotelImages = function (hotelId) {
     const options = {
         method: 'GET',
         headers: {
@@ -218,19 +224,19 @@ var getHotelImages = function (searchInput) {
         }
     };
 
-
-
-    fetch('https://hotels-com-provider.p.rapidapi.com/v1/hotels/photos?hotel_id=363464', options)
+    fetch('https://hotels-com-provider.p.rapidapi.com/v1/hotels/photos?hotel_id=' + hotelId , options)
         .then(response => response.json())
-        .then(response => {
-            const imgUrl = response[0].mainUrl 
+        .then(response => {;
+
+            const imgUrl = response[0].mainUrl
             var img = document.createElement("img")
             img.setAttribute("src", imgUrl)
-            console.log(img); 
+            img.setAttribute('width', '30%');
+            img.setAttribute('height', '30%');
 
             //Appending the cards and elements into the hotel card
             hotelbody.append(img);
-            console.log(response)
+  
         })
         .catch(err => console.error(err));
     }
