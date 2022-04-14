@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="./assets/CSS/style.css">
+  <title>Travel Easy</title>
+</head>
+
+<body>
+<a name="top"></a>
+<!--Navabr section-->
+<section class="hero is-info is-fullheight">
+  <!--Responsive Navbar with logo -->
+  <div class="hero-head">
+    <header class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="logo">
+            <img src="./assets/images/logo.png" alt="Logo">
+          </a>
+          <h1 class="navbar-item">Travel Easy</h1>
+          <!--Responsive navbar that toggles for mobile devices-->
+          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navMenu" class="navbar-menu">
+          <ul class="navbar-end">
+            <a href="./index.html" class="navbar-item" id="nav-item">
+              Home
+            </a>
+            <a href="#hotelbody" class="navbar-item" id="nav-item">
+              Hotels
+            </a>
+            <a href="#weather-card" class="navbar-item" id="nav-item">
+              Weather Forecast
+            </a>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Hero content: will be in the middle --> 
+  <!--This is where user enters city name and is taken to weather and hotel search results-->
+  <div class="hero-body hero-style">
+    <div class="container">
+      <p class="title has-text-white-bis has-text-centered">
+          Where would you rather be?
+      </p>
+      <form id="formid" class="control has-text-centered">
+        <input class="input searchcity is-rounded has-text-centered is-info form-input" type="text" placeholder="Type Your Destination City Here">
+        <button type="submit" class="btn button is-info is-responsive" id="btn">Get Away</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!--Weather forecast result which will show content based on info pulled from api-->
+<section id="weather" class="weather">
+  <div class="card weather-card is-centered has-background-info-light" id="weather-card">
+    <header class="card-header">
+      <p class="subtitle card-header-title is-centered is-size-3 has-text-grey-dark">
+        Weather Forecast
+      </p>
+    </header>
+    <div class="card-content">
+      Weather forecast result for a city will be displayed below
+      <div id="todaycontainer" class="columns">
+        
+      </div>
+    </div>
+  </div>
+    
+</section>
+
+<!--Hotel search result which will show content based on info pulled from api-->
+<section id="hotel-section" class="hotel">
+  <div class="card hotel-card is-centered has-background-info-light">
+    <header class="hotel-header">
+      <p class="card-header-title is-centered is-size-3 has-text-grey-dark">
+        Hotel Recommendations
+      </p>
+    </header>
+    <div class="hotel-content" id="hotelbody">
+      <!--Hotel bookings will be displayed below-->
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="./assets/JS/script.js"></script>
+  
+  </body>  
+  <a class="top" href="#top">Back To Top</a>
+</html>

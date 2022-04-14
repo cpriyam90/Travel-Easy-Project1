@@ -1,0 +1,81 @@
+h1 {
+    font-size: 2rem;
+    color:white
+}
+
+.logo {
+    width: 8%;
+    padding: 0px;
+    margin:10px 5px 5px 5px;
+}
+
+.hotel{
+    margin-top: 200px;
+}
+
+.hero-style {
+    background-image: url("../images/vacation1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.form-input {
+    width:50%;
+}
+
+.weather {
+    background-color: skyblue;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex:wrap;
+}
+
+.weather-card {
+    align-content: center;
+    width:80%;
+    height: 80%;
+}
+
+.hotel {
+    background-color: skyblue;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: wrap;
+}
+
+.hotel-card {
+    align-content: center;
+    width:80%;
+    height: 80%;
+}
+
+.hotel-content {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title {
+    margin:1% ;
+    
+}
+
+.top {
+    position: absolute;
+    right: 0px;
+    font-weight: bolder;
+    margin-right: 30px;
+    margin-bottom: -700px;
+    border-style: 2px solid black;
+}
+
+.top:hover {
+    background-color: #82d6bd;
+    border-radius: 20px;
+    border-style: 2px solid #000;
+}
