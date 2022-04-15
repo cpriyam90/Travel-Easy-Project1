@@ -80,23 +80,29 @@
 </section>
 
 <!--Hotel search result which will show content based on info pulled from api-->
-<section id="hotel-section" class="hotel">
-  <div class="card hotel-card is-centered has-background-info-light">
-    <header class="hotel-header">
-      <p class="card-header-title is-centered is-size-3 has-text-grey-dark">
-        Hotel Recommendations
-      </p>
-    </header>
-    <div class="hotel-content" id="hotelbody">
-      Here are some hotel suggestions for you.
-      <!--Hotel bookings will be displayed below-->
-    </div>
+<section id="hotel-section" class="hotel section">
+  <div class="container hotel-container">
+    <div class="section has-text-centered has-background-info-light hotel-section">
+        <div class="title is-size-3 has-text-grey-dark">
+          Hotel Recommendations
+        </div>
+        <div class="hotel-content section">
+          <p class="title is-size-4">Here are some hotel suggestions for you:</p>
+          <!--Hotel images will be displayed below-->
+          <div class="container">
+            <div class="has-text-centered" id="hotelbody"></div>
+          </div>
+        </div>
+    </div>    
   </div>
+<section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./assets/JS/script.js"></script>
   
-  </body>  
-  <a class="top" href="#top">Back To Top</a>
+  </body> 
+  
+    <!-- <a class="top" href="#top">Back To Top</a> -->
+  
 </html>

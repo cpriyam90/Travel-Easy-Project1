@@ -19,7 +19,7 @@ h1 {
     margin-top: 200px;
 }
 
-.hero-style, .weather, .hotel {
+.hero-style, .weather, .hotel, .hotel-container {
     background-image: url("../images/vacation1.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -56,13 +56,17 @@ h1 {
     margin: 0;
 }
 
-.hotel-card {
-    align-content: center;
-    width:80%;
-    height: 60%;
+.hotel-section {
+    border-radius: 1rem;
 }
 
-.hotel-content {
+.hotel-container {
+    
+    width:100%;
+    height: 100%;
+}
+
+/* .hotel-content {
     display:flex;
     flex: wrap;
     justify-content: space-around;
@@ -73,14 +77,14 @@ h1 {
 #hotelbody img {
     display: flex;
     justify-content: space-around;
-}
+} */
 
 .title {
     margin:1% ;
     
 }
 
-.top {
+/* .top {
     position: absolute;
     right: 0px;
     font-weight: bolder;
@@ -93,7 +97,7 @@ h1 {
     background-color: #82d6bd;
     border-radius: 20px;
     border-style: 2px solid #000;
-}
+} */
 html {
     scroll-behavior: smooth;
 }  
