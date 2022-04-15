@@ -64,8 +64,15 @@ h1 {
 
 .hotel-content {
     display:flex;
+    flex: wrap;
     justify-content: space-around;
-    align-items: center;
+   align-items: flex-start;
+   margin: 0 auto;
+}
+
+#hotelbody img {
+    display: flex;
+    justify-content: space-around;
 }
 
 .title {
