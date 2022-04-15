@@ -30,11 +30,11 @@ for (var i = 0; i < savedCities.length; i++) {
 // Key count for local storage 
 var keyCount = 0;
 // Search button click event
-document.getElementById("formid").addEventListener('submit', function(event){
+document.getElementById("formid").addEventListener('submit', function (event) {
     event.preventDefault();
     searchInput = $(".input").val();
     hotelbody.html("");
-    
+
 
     // Storing New Cities into local storage with the old Cities
     var previouslySavedCities = JSON.parse(localStorage.getItem("savedCities")) || []
@@ -55,12 +55,12 @@ function getSavedCityWeather() {
 function getUserLocation(city) {
     // Get location lon and lat
     // Make fetch request
-    fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=" + apiKey).then(function(response) {
-        
+    fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=" + apiKey).then(function (response) {
+
         // Check for valid response
         if (response.ok) {
-            response.json().then(function(data) {
-                
+            response.json().then(function (data) {
+
                 // Gets the lon and lat of the location
                 var locationLat = data[0].lat;
                 var locationLon = data[0].lon;
@@ -75,8 +75,8 @@ function getUserLocation(city) {
         } else {
             alert("Location not found!");
         }
-    }).catch(function(error) {
-        
+    }).catch(function (error) {
+
         alert("Unable to get weather");
     });
 
@@ -87,10 +87,10 @@ function getLocationWeather(lat, lon) {
     var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly,alerts&units=imperial&appid=" + apiKey;
 
 
-    fetch(apiUrl).then(function(response) {
+    fetch(apiUrl).then(function (response) {
         if (response.ok) {
-            response.json().then(function(data) {
-                
+            response.json().then(function (data) {
+
                 // City Name and date
                 var currentCityNameEl = $(".subtitle");
                 currentCityNameEl.text("Weather Forecast for " + cityName.charAt(0).toUpperCase() + cityName.slice(1));
@@ -132,7 +132,7 @@ function getLocationWeather(lat, lon) {
                     weatheri.attr("src", "https://openweathermap.org/img/wn/" + forecastarray[i].weather[0].icon + ".png");
                     temptext.text("Temp: " + forecastarray[i].temp.day + " F");
                     windtext.text("Wind Speed: " + forecastarray[i].wind_speed + " mph");
-                    
+
                 }
             })
         }
@@ -146,76 +146,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-  
+
     // Check if there are any navbar burgers
     if ($navbarBurgers.length > 0) {
-  
-      // Add a click event on each of them
-      $navbarBurgers.forEach( el => {
-        el.addEventListener('click', () => {
-  
-          // Get the target from the "data-target" attribute
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
-  
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle('is-active');
-          $target.classList.toggle('is-active');
-  
-        });
-      });
-    }
-  
-  });
 
-  
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+            el.addEventListener('click', () => {
+
+                // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+
+            });
+        });
+    }
+
+});
+
+
 
 // Vickian & Brittany's Code Below
 
-var getHotels = function(searchInput) {
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Host': 'hotels-com-provider.p.rapidapi.com',
-      'X-RapidAPI-Key': '3fc69c7541msh2095ea3bf50e2f3p1ece8ajsnf47a3cdc9c68'
-    }
-  };
-
-  // Call the hotels.com API with input from the user search
-  fetch('https://hotels-com-provider.p.rapidapi.com/v1/destinations/search?query=' + searchInput + '&currency=USD&locale=en_US', options)
-	.then(response => response.json())
-	.then(response => 
-
-        
-
-    // get hotel names from API
-    {
-        for (let i = 0; i < response.suggestions[1].entities.length; i++) {
-        //console.log(response.suggestions[1].entities[i].name);
-        
-        var hotelName = document.createElement('div')
-        hotelName.classList.add("title", "is-4")
-        hotelName.textContent = response.suggestions[1].entities[i].name;
-        console.log(hotelName);
-
-        hotelId =  response.suggestions[1].entities[i].destinationId;
-        console.log(hotelId);
-
-        // Appending the cards and elements into the hotel card
-        hotelbody.append(hotelName);
-
-        getHotelImages(hotelId);
-        }
-    })
-
-// create list item
-    .catch(err => console.error(err))
-}
-
-//priyam and vickiana trying to link images for hotel 
-
-//get hotel images based on hotelId
-var getHotelImages = function (hotelId) {
+var getHotels = function (searchInput) {
     const options = {
         method: 'GET',
         headers: {
@@ -224,22 +181,65 @@ var getHotelImages = function (hotelId) {
         }
     };
 
-    fetch('https://hotels-com-provider.p.rapidapi.com/v1/hotels/photos?hotel_id=' + hotelId , options)
+    // Call the hotels.com API with input from the user search
+    fetch('https://hotels-com-provider.p.rapidapi.com/v1/destinations/search?query=' + searchInput + '&currency=USD&locale=en_US', options)
         .then(response => response.json())
-        .then(response => {;
+        .then(response => {
+console.log(response.suggestions[1]);
 
+
+        // get hotel names from API
+        
+            for (let i = 0; i < response.suggestions[1].entities.length; i++) {
+                //console.log(response.suggestions[1].entities[i].name);
+
+                var hotelName = response.suggestions[1].entities[i].name;
+                console.log(hotelName);
+
+                hotelId = response.suggestions[1].entities[i].destinationId;
+                console.log(hotelId);
+
+                // Appending the cards and elements into the hotel card
+                // hotelbody.append(hotelName);
+
+                getHotelImages(hotelId, hotelName);
+            }
+        })
+
+        // create list item
+        .catch(err => console.error(err))
+}
+
+//priyam and vickiana trying to link images for hotel 
+
+//get hotel images based on hotelId
+var getHotelImages = function (hotelId, hotelName) {
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Host': 'hotels-com-provider.p.rapidapi.com',
+            'X-RapidAPI-Key': '3fc69c7541msh2095ea3bf50e2f3p1ece8ajsnf47a3cdc9c68'
+        }
+    };
+
+    fetch('https://hotels-com-provider.p.rapidapi.com/v1/hotels/photos?hotel_id=' + hotelId, options)
+        .then(response => response.json())
+        .then(response => {
+            console.log(hotelName)
             const imgUrl = response[0].mainUrl
             var img = document.createElement("img")
+            var hotelNameEl = document.createElement('div')
+                hotelNameEl.classList.add("title", "is-4")
+                hotelNameEl.textContent = hotelName
             img.setAttribute("src", imgUrl)
             img.setAttribute('width', '30%');
             img.setAttribute('height', '30%');
 
             //Appending the cards and elements into the hotel card
-            hotelbody.append(img);
-  
+            hotelbody.append(img, hotelNameEl);
+            console.log(response)
         })
         .catch(err => console.error(err));
-    }
+}
 
-        
-    
+
