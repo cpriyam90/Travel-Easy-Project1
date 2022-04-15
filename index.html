@@ -82,15 +82,17 @@
 <!--Hotel search result which will show content based on info pulled from api-->
 <section id="hotel-section" class="hotel section">
   <div class="container hotel-container">
-    <div class="section has-text-centered has-background-info-light hotel-section">
-        <div class="title is-size-3 has-text-grey-dark">
+    <div class="section has-background-info-light hotel-section">
+        <div class="title is-size-3 has-text-centered has-text-grey-dark">
           Hotel Recommendations
         </div>
         <div class="hotel-content section">
-          <p class="title is-size-4">Here are some hotel suggestions for you:</p>
+          <p class="title has-text-centered is-size-4">Here are some hotel suggestions for you:</p>
           <!--Hotel images will be displayed below-->
           <div class="container">
-            <div class="has-text-centered" id="hotelbody"></div>
+            <div class="has-text-centered is-flex is-flex-wrap-wrap is-justify-content-space-around" id="hotelbody">
+            </div>
+            <div class="is-flex is-justify-content-space-around is-flex-wrap-wrap" id="hotelImage"></div>
           </div>
         </div>
     </div>    

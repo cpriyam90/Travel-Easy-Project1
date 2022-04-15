@@ -12,7 +12,7 @@ var cityName = "";
 var todaycontainer = $("#todaycontainer");
 var dailyDivs = [$('#day-1-div'), $('#day-2-div'), $('#day-3-div'), $('#day-4-div'), $('#day-5-div')];
 var hotelbody = $("#hotelbody");
-var hotelImages = $("#hotelImages");
+var hotelImage = $("#hotelImage");
 var hotelName = $("#hotelName");
 var hotelId = "";
 
@@ -38,6 +38,7 @@ document.getElementById("formid").addEventListener('submit', function(event){
     var weatherContainer = document.getElementById("weather")
     weather.scrollIntoView()
     hotelbody.html("");
+    hotelImage.html("");
     
 
     // Storing New Cities into local storage with the old Cities
@@ -181,7 +182,7 @@ var getHotels = function(searchInput) {
     method: 'GET',
     headers: {
       'X-RapidAPI-Host': 'hotels-com-provider.p.rapidapi.com',
-      'X-RapidAPI-Key': '52f4366238mshd8477a2bc7b94b6p19e76bjsn1cbe9e56c2c9'
+      'X-RapidAPI-Key': '3fc69c7541msh2095ea3bf50e2f3p1ece8ajsnf47a3cdc9c68'
     }
   };
 
@@ -224,7 +225,7 @@ var getHotelImages = function (hotelId) {
         method: 'GET',
         headers: {
             'X-RapidAPI-Host': 'hotels-com-provider.p.rapidapi.com',
-            'X-RapidAPI-Key': '52f4366238mshd8477a2bc7b94b6p19e76bjsn1cbe9e56c2c9'
+            'X-RapidAPI-Key': '3fc69c7541msh2095ea3bf50e2f3p1ece8ajsnf47a3cdc9c68'
         }
     };
 
@@ -234,12 +235,13 @@ var getHotelImages = function (hotelId) {
 
             const imgUrl = response[0].mainUrl
             var img = document.createElement("img");
+            img.classList.add("hotel-image");
             img.setAttribute("src", imgUrl);
             img.setAttribute('max-width', '30%');
             img.setAttribute('max-height', '30%');
 
             //Appending the cards and elements into the hotel card
-            hotelbody.append(img);
+            hotelImage.append(img);
   
         })
         .catch(err => console.error(err));
