@@ -93,7 +93,7 @@ function getLocationWeather(lat, lon) {
                 
                 // City Name and date
                 var currentCityNameEl = $(".subtitle");
-                currentCityNameEl.text(cityName.toUpperCase() + " (" + currentDate + ")");
+                currentCityNameEl.text("Weather Forecast for " + cityName.charAt(0).toUpperCase() + cityName.slice(1));
                 // Weather Icon
                 var currentWeatherIconEl = $("#current-icon");
                 currentWeatherIconEl.attr("src", "https://openweathermap.org/img/wn/" + data.current.weather[0].icon + "@2x.png")
@@ -113,9 +113,9 @@ function getLocationWeather(lat, lon) {
                     var cardbody = $("<div>").addClass("card-content");
                     var cardheader = $("<div>").addClass("title is-4");
                     var weatheri = $("<img>").addClass("card-header-icon");
-                    var temptext = $("<div>").addClass("subtitle");
-                    var windtext = $("<p>").addClass("subtitle");
-                    var humidity = $("<p>").addClass("subtitle");
+                    var temptext = $("<div>").addClass("subtitle is-6");
+                    var windtext = $("<p>").addClass("subtitle is-6");
+                    var humidity = $("<p>").addClass("subtitle is-6");
 
                     // Appending the cards and elements into the weather card
                     todaycontainer.append(card);
@@ -130,7 +130,7 @@ function getLocationWeather(lat, lon) {
                     cardheader.text(humanDateFormat);
                     humidity.text("Humidity: " + forecastarray[i].humidity + " %");
                     weatheri.attr("src", "https://openweathermap.org/img/wn/" + forecastarray[i].weather[0].icon + ".png");
-                    temptext.text("Temperature: " + forecastarray[i].temp.day + " F");
+                    temptext.text("Temp: " + forecastarray[i].temp.day + " F");
                     windtext.text("Wind Speed: " + forecastarray[i].wind_speed + " mph");
                     
                 }
