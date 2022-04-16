@@ -27,6 +27,7 @@
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </a>
         </div>
         <div id="navMenu" class="navbar-menu">
@@ -40,67 +41,92 @@
             <a href="#weather" class="navbar-item" id="nav-item">
               Weather Forecast
             </a>
+            <a href="#getaway" class="navbar-item" id="nav-item">
+              Getaway
+            </a>
           </ul>
         </div>
-      </div>
-    </header>
-  </div>
+      </header>
+    </div>
 
   <!-- Hero content: will be in the middle --> 
   <!--This is where user enters city name and is taken to weather and hotel search results-->
-  <div class="hero-body hero-style">
-    <div class="container">
-      <p class="title has-text-white-bis has-text-centered">
-          Where would you rather be?
-      </p>
-      <form id="formid" class="control has-text-centered">
-        <input class="input searchcity is-rounded has-text-centered is-info form-input" type="text" placeholder="Type Your Destination City Here">
-        <button type="submit" class="btn button is-info is-responsive" id="btn">Get Away</button>
-      </form>
+    <div class="hero-body hero-style">
+      <div class="container">
+        <p class="title has-text-white-bis has-text-centered">
+            Where would you rather be?
+        </p>
+        <form id="formid" class="control has-text-centered">
+          <input class="input searchcity is-rounded has-text-centered is-info form-input" type="text" placeholder="Type Your Destination City Here">
+          <button type="submit" class="btn button is-info is-responsive" id="btn">Get Away</button>
+        </form>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 <!--Weather forecast result which will show content based on info pulled from api-->
-<section id="weather" class="weather section">
-  <div class="weather-container container">
-    <div class="section weather-section has-text-centered has-background-info-light" id="weather-card">
-      <p class="weather-title title is-centered is-size-3 has-text-grey-dark container">
-          Weather Forecast
-      </p>
-      <div id="weathercard" class="forecast-container">
-        Get ready for your trip by checking the weather!
-      <div id="todaycontainer" class="todaycontainer">
+  <section id="weather" class="weather section">
+    <div class="weather-container container">
+      <div class="section weather-section has-text-centered has-background-info-light" id="weather-card">
+        <p class="weather-title title is-centered is-size-3 has-text-grey-dark container">
+            Weather Forecast
+        </p>
+        <div id="weathercard" class="forecast-container">
+          Get ready for your trip by checking the weather!
+        <div id="todaycontainer" class="todaycontainer">
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 <!--Hotel search result which will show content based on info pulled from api-->
-<section id="hotel-section" class="hotel section">
-  <div class="container hotel-container">
-    <div class="section has-background-info-light hotel-section">
-        <div class="title is-size-3 has-text-centered has-text-grey-dark">
-          Hotel Recommendations
-        </div>
-        <div class="hotel-content section">
-          <p class="title has-text-centered is-size-4">Here are some hotel suggestions for you:</p>
-          <!--Hotel images will be displayed below-->
-          <div class="container">
-            <div class="has-text-centered is-flex is-flex-wrap-wrap is-justify-content-space-around" id="hotelbody">
-            </div>
-            <div class="is-flex is-justify-content-space-around is-flex-wrap-wrap" id="hotelImage"></div>
+  <section id="hotel-section" class="hotel section">
+    <div class="container hotel-container">
+      <div class="section has-background-info-light hotel-section">
+          <div class="title is-size-3 has-text-centered has-text-grey-dark">
+            Hotel Recommendations
           </div>
+          <div class="hotel-content section">
+            <p class="title has-text-centered is-size-4">Here are some hotel suggestions for you:</p>
+            <!--Hotel images will be displayed below-->
+            <div class="container">
+              <div class="has-text-centered is-flex is-flex-wrap-wrap is-justify-content-space-around" id="hotelbody">
+              </div>
+              <div class="is-flex is-justify-content-space-around is-flex-wrap-wrap" id="hotelImage"></div>
+            </div>
+          </div>
+      </div>    
+    </div>
+  </section>
+
+  <footer class="footer getaway-section" id="getaway">
+    <div class="container getaway-container has-background-info-light">
+      <h2 class="title has-text-grey-dark has-text-centered">Plan your next getaway!</h2>
+      <div class="columns">
+        <div class="column">
+          <a href="https://www.hotels.com/page/instagrammable-properties/?intlid=us_hp_pos3_instagram&pos=HCOM_US&locale=en_US" target="_blank">
+            <p class="title is-4 insta getaway">Insta-Worthy Holidays</p>
+          </a>
         </div>
-    </div>    
-  </div>
-<section>
+        <div class="column">
+          <a href="https://www.vrbo.com/" target="_blank">
+            <p class="title is-4 vrbo getaway">Unique Vacation Rentals</p>
+          </a>
+        </div>
+        <div class="column">
+          <a href="https://www.kayak.com/flights" target="_blank">
+            <p class="title is-4 flight getaway">Save on Flights</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./assets/JS/script.js"></script>
   
-  </body> 
+</body> 
   
-    <!-- <a class="top" href="#top">Back To Top</a> -->
+<a class="top" href="#top">Back To Top</a>
   
 </html>
