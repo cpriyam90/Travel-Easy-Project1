@@ -97,7 +97,7 @@ function getLocationWeather(lat, lon) {
             response.json().then(function(data) {
                 
                 // City Name and date
-                var currentCityNameEl = $(".subtitle");
+                var currentCityNameEl = $(".weather-title");
                 currentCityNameEl.text("Weather Forecast for " + cityName.charAt(0).toUpperCase() + cityName.slice(1));
                 // Weather Icon
                 var currentWeatherIconEl = $("#current-icon");
@@ -114,13 +114,13 @@ function getLocationWeather(lat, lon) {
                     var humanDateFormat = new Date(data.daily[i].dt * 1000).toLocaleDateString("en-US");
 
                     // Variables to dynamically create the classes into HTML
-                    var card = $("<div>").addClass("card columns");
-                    var cardbody = $("<div>").addClass("card-content");
-                    var cardheader = $("<div>").addClass("title is-4");
+                    var card = $("<div>").addClass("forecast-card");
+                    var cardbody = $("<div>").addClass("forecast-body");
+                    var cardheader = $("<div>").addClass("h3");
                     var weatheri = $("<img>").addClass("card-header-icon");
-                    var temptext = $("<div>").addClass("subtitle is-6");
-                    var windtext = $("<p>").addClass("subtitle is-6");
-                    var humidity = $("<p>").addClass("subtitle is-6");
+                    var temptext = $("<div>").addClass("h3");
+                    var windtext = $("<p>").addClass("h3");
+                    var humidity = $("<p>").addClass("h3");
 
                     // Appending the cards and elements into the weather card
                     todaycontainer.append(card);

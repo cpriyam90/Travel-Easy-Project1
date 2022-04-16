@@ -15,6 +15,36 @@ h1 {
     margin:10px 5px 5px 5px;
 }
 
+.hero-head {
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/vacation1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 9999;
+}
+
+
+.navbar {
+    margin-left: 20px;
+    color: rgb(79, 70, 70);
+    font-size: large;
+}
+
+#nav-item{
+    border-radius: 80px;
+    max-height: 10%;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+#nav-item:hover{
+    background-color: var(--primary-color);
+}
+
 .hotel{
     margin-top: 200px;
 }
@@ -40,10 +70,17 @@ h1 {
     flex:wrap;
 }
 
-.weather-card {
-    align-content: center;
-    width:80%;
-    height: 60%;
+.todaycontainer {
+    display: flex;
+    flex:wrap;
+} 
+
+.forecast-card {
+    display:flex;
+    flex-shrink: inherit;
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: bisque;
 }
 
 .hotel {
@@ -56,11 +93,11 @@ h1 {
     margin: 0;
 }
 
-.hotel-section {
+.hotel-section, .weather-section {
     border-radius: 1rem;
 }
 
-.hotel-container {
+.hotel-container, .weather-container {
     
     width:100%;
     height: 100%;
@@ -69,38 +106,11 @@ h1 {
     width:30%;
 }
 
-/* .hotel-content {
-    display:flex;
-    flex: wrap;
-    justify-content: space-around;
-   align-items: flex-start;
-   margin: 0 auto;
-}
-
-#hotelbody img {
-    display: flex;
-    justify-content: space-around;
-} */
-
 .title {
     margin:1% ;
     
 }
 
-/* .top {
-    position: absolute;
-    right: 0px;
-    font-weight: bolder;
-    margin-right: 30px;
-    margin-bottom: -890px;
-    border-style: 2px solid black;
-}
-
-.top:hover {
-    background-color: #82d6bd;
-    border-radius: 20px;
-    border-style: 2px solid #000;
-} */
 html {
     scroll-behavior: smooth;
 }  
@@ -134,3 +144,30 @@ html {
 #nav-item:hover{
     background-color: var(--primary-color);
 }
+/* * .top {
+    position: absolute;
+    right: 0px;
+    font-weight: bolder;
+    margin-right: 30px;
+    margin-bottom: -890px;
+    border-style: 2px solid black;
+}
+
+.top:hover {
+    background-color: #82d6bd;
+    border-radius: 20px;
+    border-style: 2px solid #000;
+}  */
+
+/* .hotel-content {
+    display:flex;
+    flex: wrap;
+    justify-content: space-around;
+   align-items: flex-start;
+   margin: 0 auto;
+}
+
+#hotelbody img {
+    display: flex;
+    justify-content: space-around;
+} */
