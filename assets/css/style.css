@@ -1,0 +1,199 @@
+:root {
+    --primary-color: #38c1fc;
+    --secondary-color: #3b3a3a;
+    --tertiary-color: skyblue;
+  }
+
+h1 {
+    font-size: 2rem;
+    color:white
+}
+
+.logo {
+    width: 8%;
+    padding: 0px;
+    margin:10px 5px 5px 5px;
+}
+
+.hero-head {
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/vacation1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 9999;
+}
+
+
+.navbar {
+    margin-left: 20px;
+    color: rgb(79, 70, 70);
+    font-size: large;
+}
+
+#nav-item{
+    border-radius: 80px;
+    max-height: 10%;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+#nav-item:hover{
+    background-color: var(--primary-color);
+}
+
+.hotel{
+    margin-top: 200px;
+}
+
+.hero-style, .weather, .hotel, .hotel-container, .getaway-section {
+    background-image: url("../images/vacation1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 80%;
+}
+
+.form-input {
+    width:50%;
+}
+
+.weather {
+    background-color: var(--tertiary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todaycontainer {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+} 
+
+.forecast-card {
+    display:flex;
+    margin: 0.5em;
+    padding: 0.5rem;
+    background-color: bisque;
+}
+
+.hotel {
+    background-color: var(--tertiary-color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: wrap;
+    margin: 0;
+}
+
+.hotel-section, .weather-section, .getaway-container {
+    border-radius: 1rem;
+}
+
+.hotel-container, .weather-container {
+    
+    width:100%;
+    height: 100%;
+}
+.hotel-image {
+    width:30%;
+}
+
+.title {
+    margin:1% ;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}  
+
+.hero-head {
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/vacation1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 9999;
+}
+
+
+.navbar {
+    margin-left: 20px;
+    color: rgb(79, 70, 70);
+    font-size: large;
+}
+
+#nav-item{
+    border-radius: 80px;
+    max-height: 10%;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+#nav-item:hover{
+    background-color: var(--primary-color);
+}
+
+.getaway {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    text-shadow: 0px 0px 10px black;
+    transition: height 2s;
+}
+
+.getaway:hover {
+    opacity: 0.5;
+    height: 50vh;
+}
+
+.insta {
+    background-image: url("../images/vacation.jpg");
+    height: 33vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vrbo {
+    background-image: url("../images/vacation2.jpg");
+    height: 33vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flight {
+    background-image: url("../images/vacation3.jpg");
+    height: 33vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+* .top {
+    position: absolute;
+    right: 0px;
+    font-weight: bolder;
+    margin-right: 30px;
+    margin-bottom: -890px;
+    border-style: 2px solid black;
+}
+
+.top:hover {
+    background-color: #82d6bd;
+    border-radius: 20px;
+    border-style: 2px solid #000;
+} 
+
