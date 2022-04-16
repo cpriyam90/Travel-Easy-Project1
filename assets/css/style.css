@@ -159,7 +159,7 @@ html {
 }
 
 .insta {
-    background-image: url("./assets/images/vacation.jpg");
+    background-image: url("../images/vacation.jpg");
     height: 33vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -167,7 +167,7 @@ html {
 }
 
 .vrbo {
-    background-image: url("./assets/images/vacation2.jpg");
+    background-image: url("../images/vacation2.jpg");
     height: 33vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -175,7 +175,7 @@ html {
 }
 
 .flight {
-    background-image: url("../images/vacation3.JPG");
+    background-image: url("../images/vacation3.jpg");
     height: 33vh;
     background-position: center;
     background-repeat: no-repeat;
