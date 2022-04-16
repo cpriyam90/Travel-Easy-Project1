@@ -2,6 +2,7 @@
 ## Description
 "Feeling stuck at home? Need to get away from your computer screen for a weekend? We’re here to make Travel Easy. If you’re looking for spontaneity then we have the results for you. Find all of the cheapest hotel options and the weather forecasts by location and get on your way away."
 \
+\
 Travel-Easy is a space where users can plan their vacations using our weather forecast and hotel finder search features. Travel had paused during the pandemic, but as restrictions reduce, people are looking to increase their travel. Travel-Easy allows them to plan for their last-minute travels by looking for the cheapest hotels in the area as well as packing appropriately by using our weather forecast feature.
 
 ## Technologies Used
@@ -57,15 +58,24 @@ When the user enters their destination of choice, and clicks on the "Get Away" b
 * W3 schools
 
 ## Screenshot
-
+\
+* Screenshot of landing page
 ![alt="Screenshot of landing page"](./assets/images/Screenshot1.png)
-/
+\
+\
+* Screenshot of when user enters city
 ![alt="Screenshot of when user enters city"](./assets/images/Screenshot2.png)
-/
+\
+\
+* Screenshot of weather forecast
 ![alt="Screenshot of weather forecast"](./assets/images/Screenshot3.png)
-/
+\
+\
+* Screenshot of hotel results
 ![alt="Screenshot of hotel results"](./assets/images/Screenshot4.png)
-/
+\
+\
+* Screenshot of additional travel links
 ![alt="Screenshot of additional travel links"](./assets/images/Screenshot5.png)
 
 ## Link to deployed page
