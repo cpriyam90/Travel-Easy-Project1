@@ -109,7 +109,7 @@ function getLocationWeather(lat, lon) {
                 var forecastarray = data.daily
                 todaycontainer.html("");
 
-                for (var i = 0; i < forecastarray.length - 1; i++) {
+                for (var i = 0; i < forecastarray.length - 2; i++) {
                     // converting Unix to date
                     var humanDateFormat = new Date(data.daily[i].dt * 1000).toLocaleDateString("en-US");
 

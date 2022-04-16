@@ -63,22 +63,21 @@ h1 {
 
 .weather {
     background-color: var(--tertiary-color);
-    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex:wrap;
 }
 
 .todaycontainer {
     display: flex;
-    flex:wrap;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
 } 
 
 .forecast-card {
     display:flex;
-    flex-shrink: inherit;
-    margin: 1rem;
+    margin: 0.5em;
     padding: 0.5rem;
     background-color: bisque;
 }
