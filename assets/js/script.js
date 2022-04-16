@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
 
-// Vickian & Brittany's Code Below
+// Vickiana & Brittany's Code Below
 
 var getHotels = function(searchInput) {
   const options = {
@@ -196,7 +196,7 @@ var getHotels = function(searchInput) {
     // get hotel names from API
     {
         for (let i = 0; i < response.suggestions[1].entities.length; i++) {
-        //console.log(response.suggestions[1].entities[i].name);
+        
         
         var hotelName = document.createElement('div')
         hotelName.classList.add("title")
