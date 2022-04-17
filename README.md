@@ -77,6 +77,10 @@ When the user enters their destination of choice, and clicks on the "Get Away" b
 \
 * Screenshot of additional travel links
 ![alt="Screenshot of additional travel links"](./assets/images/Screenshot5.png)
+\
+\
+* Gif of Travel-Easy
+![alt="Screenshot of additional travel links"](./assets/images/landingpage.gif)
 
 ## Link to deployed page
 [Travel Easy]( https://cpriyam90.github.io/Travel-Easy-Project1/)
